@@ -49,7 +49,7 @@ button {
     transition: 1s;
     padding: 0px;
     font-size: inherit;
-
+    border:solid 1px;
 }
 /* Relogio */
 
@@ -72,4 +72,4 @@ div#Relogio p#buttonRelogio{
 div#Relogio p#buttonData{
     font-size: 50px;
     font-family: advancedPixel;
-}
+}   

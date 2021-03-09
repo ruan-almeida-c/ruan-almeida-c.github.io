@@ -63,6 +63,12 @@
     color: white !important;
 }
 
+.contrast button{
+    background: black !important;
+    border: 1px solid white !important;
+    color: yellow !important;
+}
+
 .contrast img.on-contrast-force-gray {
     filter: grayscale(100%) contrast(120%);
 }

@@ -8,31 +8,26 @@ body{
     }
 }
 
-nav#menu img {
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
 /* formatando o menu */
 
 nav#menu {
+    width: 100%;
     flex-wrap: wrap;
     display: flex;
     align-content: center;
+    align-items: center;
     text-align: center;
 }
 
-nav#menu img{
-    width: 100px;
-    height: 100px;
-}
-
 nav#menu ul {
+    width: 100%;
     flex-wrap: wrap;
     left: 50px;
     display: flex;  
     text-decoration: none;
     list-style-type: none;
+    align-content: center;
+    align-items: center;
     text-align: center;
 }
 

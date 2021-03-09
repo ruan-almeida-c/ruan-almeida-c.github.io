@@ -37,7 +37,7 @@ function voz(){
 
         h = addZero(now.getHours());
         m = addZero(now.getMinutes());
-        s = addZero(now.getSeconds());
+        s = addZero(now.getSeconds(now.getSeconds() + 1));
         p.innerHTML = h + ":" + m + ":" + s;
 
         voz();
@@ -53,3 +53,4 @@ function voz(){
 },1000)
 
 // setInterval(attHour,600);
+

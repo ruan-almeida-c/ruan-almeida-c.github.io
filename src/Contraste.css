@@ -69,7 +69,4 @@
 
 .contrast img.on-contrast-force-white {
     filter: brightness(0) invert(1);
-    background: yellow;
-    border: solid;  
-    border-radius: 50%;
 }

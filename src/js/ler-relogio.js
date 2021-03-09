@@ -27,34 +27,3 @@ setInterval(function () {
 }, 1000);
     
 
-// function attHour(){
-//     now = new Date; 
-//     if(minuto === 0)
-//     {
-//         p = document.getElementById("buttonRelogio");
-//         h = addZero(now.getHours());
-//         m = addZero(now.getMinutes());
-//         p.innerHTML = h + ":" + m + ":" + now.getSeconds(now.getSeconds() + 1);
-//         voz();
-//         minuto = now.getMinutes();
-//     }
-//     else if(minuto != now.getMinutes())
-//     {
-//         p = document.getElementById("buttonRelogio");
-
-//         h = addZero(now.getHours());
-//         m = addZero(now.getMinutes());
-//         p.innerHTML = h + ":" + m + ":" + now.getSeconds(now.getSeconds() + 1);
-
-//         voz();
-//         minuto = now.getMinutes();
-//     }
-
-//     p = document.getElementById("buttonData");
-//     var mes = addZero(now.getMonth() + 1);
-
-//     d = addZero(now.getDate());
-//     y = now.getFullYear();
-//     p.innerHTML = d + "/" + mes + "/" + y;
-// }
-// setInterval(attHour, 1000);

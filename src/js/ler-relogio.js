@@ -1,5 +1,12 @@
 var minuto = 0;
 
+function addZero(i) {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
+  }
+
 function voz(){
     now = new Date;
     //var voices = window.speechSynthesis.getVoices();
@@ -12,13 +19,15 @@ function voz(){
 
  }
 
-function attHour(){
+ setInterval(function attHour(){
     now = new Date; 
     if(minuto === 0)
     {
         p = document.getElementById("buttonRelogio");
-
-        p.innerHTML = now.getHours() + ":" + now.getMinutes();
+        h = addZero(now.getHours());
+        m = addZero(now.getMinutes());
+        s = addZero(now.getSeconds());
+        p.innerHTML = h + ":" + m + ":" + s;
         voz();
         minuto = now.getMinutes();
     }
@@ -26,15 +35,21 @@ function attHour(){
     {
         p = document.getElementById("buttonRelogio");
 
-        p.innerHTML = now.getHours() + ":" + now.getMinutes();
+        h = addZero(now.getHours());
+        m = addZero(now.getMinutes());
+        s = addZero(now.getSeconds());
+        p.innerHTML = h + ":" + m + ":" + s;
+
         voz();
         minuto = now.getMinutes();
     }
 
     p = document.getElementById("buttonData");
-    var mes = now.getMonth() + 1;
+    var mes = addZero(now.getMonth() + 1);
 
-    p.innerHTML = now.getDate() + "/" + mes + "/" + now.getFullYear();
-}
+    d = addZero(now.getDate());
+    y = now.getFullYear();
+    p.innerHTML = d + "/" + mes + "/" + y;
+},1000)
 
-setInterval(attHour,1000);
+// setInterval(attHour,600);

@@ -3,7 +3,7 @@ var minuto = -1;
 function voz(){
     now = new Date;
     //var voices = window.speechSynthesis.getVoices();
-    var msg = new SpeechSynthesisUtterance(now.getHours() + ":" + now.getMinutes());
+    var msg = new SpeechSynthesisUtterance(now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds());
     msg.lang = 'pt-BR';
     //msg.voice = voices[2];
     msg.pitch = 1;
@@ -18,7 +18,7 @@ function attHour(){
     {
         p = document.getElementById("buttonRelogio");
 
-        p.innerHTML = now.getHours() + ":" + now.getMinutes();
+        p.innerHTML = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
         voz();
         minuto = now.getMinutes();
     }
@@ -28,7 +28,7 @@ function attHour(){
         {
             p = document.getElementById("buttonRelogio");
 
-            p.innerHTML = now.getHours() + ":0" + now.getMinutes();
+            p.innerHTML = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
             voz();
             minuto = now.getMinutes();
         }
@@ -36,7 +36,7 @@ function attHour(){
         {
             p = document.getElementById("buttonRelogio");
 
-            p.innerHTML = now.getHours() + ":" + now.getMinutes();
+            p.innerHTML = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
             voz();
             minuto = now.getMinutes();
         }

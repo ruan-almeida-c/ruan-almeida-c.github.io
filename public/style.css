@@ -1,76 +1,58 @@
 @charset "UTF-8";
 
 body{
-    background-image: url("fundo.jpg");
+    background-color: white;
+    @font-face {
+        font-family: advancedPixel;
+        src: url('advanced_pixel_lcd-7.ttf')
+    }
 }
 
-/*header#cabecalho {
-    border-bottom: 1px #606060 solid;
-}*/
-
-header#cabecalho img {
-    filter: contrast();
-    display: block;
+nav#menu img {
     margin-top: 10px;
     margin-left: 10px;
-}
-
-header#cabecalho hgroup#titulo {
-    display: block;
-    position: absolute;
-    top: 0px;
-    left: 150px;
 }
 
 /* formatando o menu */
 
 nav#menu {
-    display: block;
+    display: flex;
+    align-content: center;
+    text-align: center;
+}
+
+nav#menu img{
+    width: 100px;
+    height: 100px;
 }
 
 nav#menu ul {
-    list-style: none;
-    text-transform: uppercase;
-    position: absolute;
-    top: 10px;
-    left: 500px;
+    left: 50px;
+    display: flex;  
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
 }
 
 nav#menu li {
-    display: inline-block;  
-    font-size: xx-large;
     transition: background-color 1s;
-    /*transition: font-size 1s;*/
+    transition: font-size 1s;
 }
 
-/*nav#menu li:hover {
-    background-color: #606060;
-    font-size: 400%;
-}*/
-
-nav#menu button {
-    background-color: none;
-    margin-left: 50px;
-    width: 200px;
-    height: 90px;
-    font-size: xx-large;
+button:hover {
+    background-color: black;
+    color: white;
 }
 
-nav#menu a {
-    background-color: #dddddd;
-    padding: 0px;
-    margin: 0px 30px 0px 30px;
-    color: #000000;
-    text-decoration: none;
+button {
+    background-color: white;
+   margin-left: 65px;
+    width: 220px;
+    height: 100px;
     transition: 1s;
+    padding: 0px;
+    font-size: 28px;
 }
-
-nav#menu a:hover {
-    background-color: #606060;
-    color:#ffff00;
-    text-decoration: underline;
-}
-
 /* Relogio */
 
 div#Relogio{
@@ -80,33 +62,16 @@ div#Relogio{
 }
 
 div#Relogio h1{
-    font-size: 300%
+    font-size: 80px;
+    font-family: advancedPixel;
 }
 
 div#Relogio p#buttonRelogio{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 800%;    
+    font-size: 150px;
+    font-family: advancedPixel;
 }
 
 div#Relogio p#buttonData{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 250%;    
-}
-
-/* Cronometro */
-
-div#Cronometro{
-    display: block;
-    position: relative;
-    /*left: 50%;*/
-    padding: 10px;
-}
-
-#Cronometro{
-    font-size: 37px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-#inicio{
-    margin-top: 100px;
+    font-size: 50px;
+    font-family: advancedPixel;
 }

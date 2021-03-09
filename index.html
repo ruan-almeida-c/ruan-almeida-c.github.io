@@ -11,17 +11,10 @@
   <body>
     <div id="interface">
       <header id="cabecalho">
-        <img src="public/icone.png" width="100" alt="logo">
-        <hgroup id="titulo">
-          <h1 style="text-align: center;">Relógio acessível</h1>
-          <h2 style="text-align: center;">A internet é para todos!</h2>
-        </hgroup>
-
         <nav id="menu">
+          <img src="public/icone.png" alt="logo">
           <ul id="inicio"> 
-            <li><a href="#interface" id="altocontraste" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">contraste</a></li>
-            <li><a href="#Relogio">Relógio</a></li> 
-            <li><a href="#Cronometro">Cronômetro</a></li>
+            <li><button href="#interface" id="altocontraste" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">contraste</button></li>
             <li><button name="increase-font" id="increase-font" title="Aumentar fonte">Aumentar fonte</button></li>
             <li><button name="decrease-font" id="decrease-font" title="Diminuir fonte">Diminuir fonte</button></li>
           </ul>
@@ -32,27 +25,10 @@
       <main>
         <div id="Relogio">
           <center><h1>RELÓGIO</h1>
-          <!--<button id="ButRelogio" onclick="voz()">[relógio aqui]</button><br/>-->
-          <p id="buttonRelogio"></p>
-          <p id="buttonData"></p><br/>
-          <a href="#inicio">voltar ao início</a></center>
-        </div>
-        <hr/>
-
-        <div id="Cronometro">
-          <center><h1>CRONÔMETRO</h1>
-            <form name="form_main">
-              <div>
-                <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">000</span>
-              </div>
-            
-              <br />
-            
-              <button type="button" name="start">start</button>
-              <button type="button" name="pause">pause</button>
-              <button type="button" name="reset">reset</button>
-            </form>
-          <a href="#inicio" id="inicio">voltar ao início</a></center>
+            <p id="buttonRelogio"></p>
+            <p id="buttonData"></p><br/>
+            <button id="ButRelogio" onclick="voz()" style="margin-left: 0;">Escute a hora</button>
+          <button href="#inicio">voltar ao início</button></center>
         </div>
         <hr/>
 
@@ -63,6 +39,5 @@
     <script src="src/js/contrast.js"></script>
     <script src="src/js/font-size.js"></script>
     <script src="src/js/ler-relogio.js"></script>
-    <script src="src/js/cronometro.js"></script>
   </body>
 </html>

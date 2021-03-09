@@ -1,11 +1,12 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: "advancedPixel";
+    src: url('advanced_pixel_lcd-7.ttf');
+}
+
 body{
     background-color: white;
-    @font-face {
-        font-family: advancedPixel;
-        src: url('advanced_pixel_lcd-7.ttf')
-    }
 }
 
 /* formatando o menu */

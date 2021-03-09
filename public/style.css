@@ -16,6 +16,7 @@ nav#menu img {
 /* formatando o menu */
 
 nav#menu {
+    flex-wrap: wrap;
     display: flex;
     align-content: center;
     text-align: center;
@@ -27,6 +28,7 @@ nav#menu img{
 }
 
 nav#menu ul {
+    flex-wrap: wrap;
     left: 50px;
     display: flex;  
     text-decoration: none;
@@ -46,12 +48,13 @@ button:hover {
 
 button {
     background-color: white;
-   margin-left: 65px;
-    width: 220px;
-    height: 100px;
+    margin-left: 65px;
+    width: 10rem;
+    height: 5rem;
     transition: 1s;
     padding: 0px;
-    font-size: 28px;
+    font-size: inherit;
+
 }
 /* Relogio */
 

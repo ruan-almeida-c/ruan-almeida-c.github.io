@@ -19,38 +19,42 @@ function voz(){
 
  }
 
- setInterval(function attHour(){
-    now = new Date; 
-    if(minuto === 0)
-    {
-        p = document.getElementById("buttonRelogio");
-        h = addZero(now.getHours());
-        m = addZero(now.getMinutes());
-        s = addZero(now.getSeconds());
-        p.innerHTML = h + ":" + m + ":" + s;
-        voz();
-        minuto = now.getMinutes();
-    }
-    else if(minuto != now.getMinutes())
-    {
-        p = document.getElementById("buttonRelogio");
+ var clock = document.getElementById('buttonRelogio');
+    
 
-        h = addZero(now.getHours());
-        m = addZero(now.getMinutes());
-        s = addZero(now.getSeconds(now.getSeconds() + 1));
-        p.innerHTML = h + ":" + m + ":" + s;
+setInterval(function () {
+    clock.innerHTML = ((new Date).toLocaleString().substr(11, 8));  
+}, 1000);
+    
 
-        voz();
-        minuto = now.getMinutes();
-    }
+// function attHour(){
+//     now = new Date; 
+//     if(minuto === 0)
+//     {
+//         p = document.getElementById("buttonRelogio");
+//         h = addZero(now.getHours());
+//         m = addZero(now.getMinutes());
+//         p.innerHTML = h + ":" + m + ":" + now.getSeconds(now.getSeconds() + 1);
+//         voz();
+//         minuto = now.getMinutes();
+//     }
+//     else if(minuto != now.getMinutes())
+//     {
+//         p = document.getElementById("buttonRelogio");
 
-    p = document.getElementById("buttonData");
-    var mes = addZero(now.getMonth() + 1);
+//         h = addZero(now.getHours());
+//         m = addZero(now.getMinutes());
+//         p.innerHTML = h + ":" + m + ":" + now.getSeconds(now.getSeconds() + 1);
 
-    d = addZero(now.getDate());
-    y = now.getFullYear();
-    p.innerHTML = d + "/" + mes + "/" + y;
-},1000)
+//         voz();
+//         minuto = now.getMinutes();
+//     }
 
-// setInterval(attHour,600);
+//     p = document.getElementById("buttonData");
+//     var mes = addZero(now.getMonth() + 1);
 
+//     d = addZero(now.getDate());
+//     y = now.getFullYear();
+//     p.innerHTML = d + "/" + mes + "/" + y;
+// }
+// setInterval(attHour, 1000);

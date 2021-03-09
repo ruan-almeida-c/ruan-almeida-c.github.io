@@ -1,21 +1,26 @@
 window.onload = function() {
-    var elementBody = document.querySelector('body');
-    var elementBtnIncreaseFont = document.getElementById('increase-font');
-    var elementBtnDecreaseFont = document.getElementById('decrease-font');
-    // Padrão de tamanho, equivale a 100% do valor definido no Body
-    var fontSize = 100;
-    // Valor de incremento ou decremento, equivale a 10% do valor do Body
-    var increaseDecrease = 10;
+    const html = document.body.parentNode;
 
-    // Evento de click para aumentar a fonte
-    elementBtnIncreaseFont.addEventListener('click', function(event) {
-        fontSize = fontSize + increaseDecrease;
-        elementBody.style.fontSize = fontSize + '%';
-    });
+    //Necessário para poder acessar e alterar o tamanho da fonte
+    html.style.fontSize = window.getComputedStyle(html).fontSize;
+    
+    const increase_font = document.getElementById("increase_font");
+    const decrease_font = document.getElementById("decrease_font");
+    
 
-    // Evento de click para diminuir a fonte
-    elementBtnDecreaseFont.addEventListener('click', function(event) {
-        fontSize = fontSize - increaseDecrease;
-        elementBody.style.fontSize = fontSize + '%';
-    });
+    //Aumenta a fonte em 1px
+    function inc_font(){
+        var atual = parseInt(html.style.fontSize);
+        html.style.fontSize = (++atual).toString() + 'px';
+    }
+
+//Diminui em 1px
+    function dec_font(){
+        var atual = parseInt(html.style.fontSize);
+        if(atual <= 25) return;
+        html.style.fontSize = (--atual).toString() + 'px';
+    }
+
+    decrease_font.onclick = dec_font;
+    increase_font.onclick = inc_font;
 }
